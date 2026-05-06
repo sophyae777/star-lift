@@ -192,7 +192,6 @@
 
     .back-btn:hover { background: #b8b8ff; color: #0a0a2e; }
 
-    /* image placeholder box */
     .img-placeholder {
       width: 100%;
       max-width: 700px;
@@ -210,7 +209,6 @@
       text-transform: uppercase;
     }
 
-    /* video placeholder box */
     .video-placeholder {
       width: 100%;
       max-width: 700px;
@@ -228,7 +226,6 @@
       text-transform: uppercase;
     }
 
-    /* real images when you add them */
     .section-img {
       width: 100%;
       max-width: 700px;
@@ -551,54 +548,6 @@
     }
 
     /* =====================
-       CONTACT
-    ===================== */
-    #contact {
-      background: #1a1a6e;
-      padding: 100px 40px;
-      text-align: center;
-    }
-
-    .contact-grid {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .contact-icon {
-      width: 60px;
-      height: 60px;
-      background: #2a2a8e;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-    }
-
-    .contact-item p {
-      color: #e0e0ff;
-      font-size: 15px;
-    }
-
-    .contact-item a {
-      color: #b8b8ff;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .contact-item a:hover { text-decoration: underline; }
-
-    /* =====================
        SCROLL FADE IN
     ===================== */
     .fade-in {
@@ -626,7 +575,6 @@
       <li><a href="#prototype">Prototype</a></li>
       <li><a href="#literature">Research</a></li>
       <li><a href="#simulations">Simulations</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -676,6 +624,8 @@
       </div>
 
       <!-- ---- TEAM MEMBER 2 ---- -->
+      <!-- TO DO: replace 'kelsey.jpg' with your actual photo filename -->
+      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('kelsey')">
         <div class="star-frame">
           <img src="kelsey.jpg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
@@ -686,6 +636,8 @@
       </div>
 
       <!-- ---- TEAM MEMBER 3 ---- -->
+      <!-- TO DO: replace 'manuella.jpg' with your actual photo filename -->
+      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('manuella')">
         <div class="star-frame">
           <img src="manuella.jpg" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
@@ -696,6 +648,8 @@
       </div>
 
       <!-- ---- TEAM MEMBER 4 ---- -->
+      <!-- TO DO: replace 'raquel.jpg' with your actual photo filename -->
+      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('raquel')">
         <div class="star-frame">
           <img src="raquel.jpg" alt="Raquel Conard" onerror="this.style.display='none'"/>
@@ -706,6 +660,8 @@
       </div>
 
       <!-- ---- TEAM MEMBER 5 ---- -->
+      <!-- TO DO: replace 'sophya.jpg' with your actual photo filename -->
+      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('sophya')">
         <div class="star-frame">
           <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
@@ -754,11 +710,11 @@
       HOW IT WORKS — Write 1 paragraph explaining the mechanism. How does it lift, raise legs, and slide the user?
     </p>
 
-    <!-- TO DO: replace src="render.jpg" with your actual SolidWorks Visualize render filename -->
-    <!-- TO DO: upload the render image to your GitHub repo with that same filename -->
+    <!-- TO DO: upload your render image to GitHub and replace 'render.jpg' with your filename -->
+    <!-- TO DO: delete the placeholder div below and uncomment the img tag -->
     <div class="img-placeholder fade-in">
       ↑ Replace this with your SolidWorks Visualize render image
-      <!-- When ready: delete the div above and use this instead:
+      <!-- When ready delete this div and use:
       <img class="section-img" src="render.jpg" alt="S.T.A.R. Lift SolidWorks Render" />
       -->
     </div>
@@ -788,13 +744,11 @@
     </video> -->
     <div class="video-placeholder fade-in">↑ Paste your main demo video here (see comments above)</div>
 
-    <!-- Individual component cards - add as many as you need -->
     <div class="prototype-grid">
 
       <!-- ---- COMPONENT 1 ---- -->
       <!-- TO DO: replace placeholder text and add image/video -->
       <div class="prototype-card fade-in">
-        <!-- TO DO: add image or video of this component -->
         <div class="prototype-media">Image / Video Here</div>
         <h4>Lifting Mechanism</h4>
         <!-- TO DO: describe how the lifting mechanism works -->
@@ -802,6 +756,7 @@
       </div>
 
       <!-- ---- COMPONENT 2 ---- -->
+      <!-- TO DO: replace placeholder text and add image/video -->
       <div class="prototype-card fade-in">
         <div class="prototype-media">Image / Video Here</div>
         <h4>Leg Raise Mechanism</h4>
@@ -810,6 +765,7 @@
       </div>
 
       <!-- ---- COMPONENT 3 ---- -->
+      <!-- TO DO: replace placeholder text and add image/video -->
       <div class="prototype-card fade-in">
         <div class="prototype-media">Image / Video Here</div>
         <h4>Transfer / Sliding Mechanism</h4>
@@ -831,7 +787,7 @@
     <h2 class="section-title fade-in">Literature & Prior Art</h2>
     <p class="section-subtitle fade-in">Research, motivation, and what makes us different</p>
 
-    <!-- TO DO: write your motivation paragraph - why did you choose this problem? -->
+    <!-- TO DO: write your motivation paragraph -->
     <p class="section-text fade-in">
       MOTIVATION — Why did you choose this problem? Include stats or facts about the population affected (e.g. how many wheelchair users need assisted transfers, caregiver injury rates, etc.)
     </p>
@@ -839,7 +795,7 @@
     <div class="lit-grid">
 
       <!-- ---- PRIOR ART 1 ---- -->
-      <!-- TO DO: fill in the closest existing product/patent and explain how yours is better -->
+      <!-- TO DO: fill in product/patent name and explanation -->
       <div class="lit-card fade-in">
         <h4>Existing Product / Patent Name</h4>
         <p>Describe what this product or patent does, and explain how the S.T.A.R. Lift is different and better.</p>
@@ -871,21 +827,21 @@
     <h2 class="section-title fade-in">Exploded View</h2>
     <p class="section-subtitle fade-in">Key components of the S.T.A.R. Lift</p>
 
-    <!-- TO DO: write a short intro sentence about the exploded view -->
+    <!-- TO DO: write a short intro sentence -->
     <p class="section-text fade-in">
       The exploded view below shows all key components of the S.T.A.R. Lift. Each part is labeled and described.
     </p>
 
-    <!-- TO DO: upload your exploded view image to GitHub and replace 'exploded.jpg' -->
-    <!-- TO DO: delete the placeholder div and uncomment the img tag below -->
+    <!-- TO DO: upload exploded view image to GitHub and replace 'exploded.jpg' -->
+    <!-- TO DO: delete the placeholder div and uncomment the img tag -->
     <div class="img-placeholder fade-in">
       ↑ Replace this with your SolidWorks exploded view image
-      <!-- When ready: delete this div and use:
+      <!-- When ready delete this div and use:
       <img class="section-img" src="exploded.jpg" alt="S.T.A.R. Lift Exploded View" />
       -->
     </div>
 
-    <!-- TO DO: if you have a second exploded view image, add it here -->
+    <!-- TO DO: add a second exploded view image if you have one -->
     <!-- <img class="section-img" src="exploded2.jpg" alt="S.T.A.R. Lift Exploded View 2" /> -->
 
     <a href="#hero" class="back-btn" style="margin-top:40px; display:inline-block;">Back to Top</a>
@@ -906,8 +862,7 @@
     <div class="sim-grid">
 
       <!-- ---- STUDY 1 ---- -->
-      <!-- Each card = one simulation or experiment -->
-      <!-- TO DO: fill in all 4 fields for each study -->
+      <!-- TO DO: fill in all 4 fields -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Study 1</p>
@@ -943,8 +898,6 @@
 
     <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
   </section>
-
- 
 
   <!-- =====================
        JAVASCRIPT
@@ -982,8 +935,8 @@
     const bioData = {
       alexa: {
         name: 'Alexa Dumitriu',
-        role: 'YOUR ROLE HERE',           // e.g. 'Lead Mechanical Engineer'
-        bio:  'YOUR BIO HERE.',           // 2-3 sentences
+        role: 'YOUR ROLE HERE',
+        bio:  'YOUR BIO HERE.',
         img:  'alexa.jpg',
         initials: 'AD'
       },
