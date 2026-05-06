@@ -152,6 +152,183 @@
       opacity: 0.7;
     }
 
+    /* ABOUT SECTION */
+    #about {
+      background: #1a1a6e;
+      padding: 100px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      text-align: center;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #b8b8ff;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .star-frame {
+      width: 140px;
+      height: 140px;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background: #2a2a8e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .team-card:hover .star-frame {
+      transform: rotate(15deg) scale(1.05);
+    }
+
+    .star-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .initials {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #b8b8ff;
+      position: absolute;
+    }
+
+    .initials.large {
+      font-size: 48px;
+    }
+
+    .member-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: white;
+      margin-top: 16px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .member-role {
+      font-size: 12px;
+      color: #b8b8ff;
+      text-align: center;
+      margin-top: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Bio popup */
+    .bio-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bio-overlay.active {
+      display: flex;
+    }
+
+    .bio-popup {
+      background: #1a1a6e;
+      border: 2px solid #b8b8ff;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .bio-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      color: #b8b8ff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .bio-popup h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: white;
+      margin: 20px 0 4px;
+    }
+
+    .bio-popup p:first-of-type {
+      color: #b8b8ff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .bio-popup p:last-of-type {
+      color: #e0e0ff;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .bio-star-frame {
+      width: 120px;
+      height: 120px;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background: #2a2a8e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-star-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
   </style>
 </head>
 
@@ -193,6 +370,83 @@
 
   </section>
 
+  <!-- ABOUT US -->
+  <section id="about">
+
+    <div class="about-container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">Meet the team behind S.T.A.R. Lift</p>
+
+      <div class="team-grid">
+
+        <!-- TEAM MEMBER 1 -->
+        <div class="team-card" onclick="openBio('alexa')">
+          <div class="star-frame">
+            <img src="alexa.jpg" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
+            <span class="initials">AD</span>
+          </div>
+          <h3 class="member-name">Alexa Dumitriu</h3>
+          <p class="member-role">YOUR ROLE HERE</p>
+        </div>
+
+        <!-- TEAM MEMBER 2 -->
+        <div class="team-card" onclick="openBio('kelsey')">
+          <div class="star-frame">
+            <img src="kelsey.jpg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
+            <span class="initials">KA</span>
+          </div>
+          <h3 class="member-name">Kelsey Anthony</h3>
+          <p class="member-role">YOUR ROLE HERE</p>
+        </div>
+
+        <!-- TEAM MEMBER 3 -->
+        <div class="team-card" onclick="openBio('manuella')">
+          <div class="star-frame">
+            <img src="manuella.jpg" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
+            <span class="initials">MK</span>
+          </div>
+          <h3 class="member-name">Manuella Kwawu</h3>
+          <p class="member-role">YOUR ROLE HERE</p>
+        </div>
+
+        <!-- TEAM MEMBER 4 -->
+        <div class="team-card" onclick="openBio('raquel')">
+          <div class="star-frame">
+            <img src="raquel.jpg" alt="Raquel Conard" onerror="this.style.display='none'"/>
+            <span class="initials">RC</span>
+          </div>
+          <h3 class="member-name">Raquel Conard</h3>
+          <p class="member-role">YOUR ROLE HERE</p>
+        </div>
+
+        <!-- TEAM MEMBER 5 -->
+        <div class="team-card" onclick="openBio('sophya')">
+          <div class="star-frame">
+            <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
+            <span class="initials">SE</span>
+          </div>
+          <h3 class="member-name">Sophya Elkihel</h3>
+          <p class="member-role">YOUR ROLE HERE</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BIO POPUP -->
+    <div class="bio-overlay" id="bioOverlay" onclick="closeBio()">
+      <div class="bio-popup" onclick="event.stopPropagation()">
+        <button class="bio-close" onclick="closeBio()">✕</button>
+        <div class="bio-star-frame">
+          <img id="bioImg" src="" alt=""/>
+          <span id="bioInitials" class="initials large"></span>
+        </div>
+        <h3 id="bioName"></h3>
+        <p id="bioRole"></p>
+        <p id="bioBio"></p>
+      </div>
+    </div>
+
+  </section>
 
   <!-- JAVASCRIPT -->
   <script>
@@ -210,6 +464,61 @@
       star.style.animationDelay    = Math.random() * 3 + 's';
       star.style.animationDuration = (Math.random() * 2 + 2) + 's';
       starField.appendChild(star);
+    }
+
+    // Team bio data
+    const bioData = {
+      alexa: {
+        name: 'Alexa Dumitriu',
+        role: 'YOUR ROLE HERE',
+        bio: 'YOUR BIO HERE. 2-3 sentences about Alexa.',
+        img: 'alexa.jpg',
+        initials: 'AD'
+      },
+      kelsey: {
+        name: 'Kelsey Anthony',
+        role: 'YOUR ROLE HERE',
+        bio: 'YOUR BIO HERE. 2-3 sentences about Kelsey.',
+        img: 'kelsey.jpg',
+        initials: 'KA'
+      },
+      manuella: {
+        name: 'Manuella Kwawu',
+        role: 'YOUR ROLE HERE',
+        bio: 'YOUR BIO HERE. 2-3 sentences about Manuella.',
+        img: 'manuella.jpg',
+        initials: 'MK'
+      },
+      raquel: {
+        name: 'Raquel Conard',
+        role: 'YOUR ROLE HERE',
+        bio: 'YOUR BIO HERE. 2-3 sentences about Raquel.',
+        img: 'raquel.jpg',
+        initials: 'RC'
+      },
+      sophya: {
+        name: 'Sophya Elkihel',
+        role: 'YOUR ROLE HERE',
+        bio: 'YOUR BIO HERE. 2-3 sentences about Sophya.',
+        img: 'sophya.jpg',
+        initials: 'SE'
+      }
+    };
+
+    // Open bio popup
+    function openBio(name) {
+      const person = bioData[name];
+      document.getElementById('bioName').textContent     = person.name;
+      document.getElementById('bioRole').textContent     = person.role;
+      document.getElementById('bioBio').textContent      = person.bio;
+      document.getElementById('bioImg').src              = person.img;
+      document.getElementById('bioInitials').textContent = person.initials;
+      document.getElementById('bioOverlay').classList.add('active');
+    }
+
+    // Close bio popup
+    function closeBio() {
+      document.getElementById('bioOverlay').classList.remove('active');
     }
 
   </script>
