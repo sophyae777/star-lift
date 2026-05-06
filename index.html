@@ -9,11 +9,7 @@
 
   <style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -22,7 +18,9 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
+    /* =====================
+       NAV
+    ===================== */
     nav {
       position: fixed;
       top: 0;
@@ -64,11 +62,11 @@
       transition: color 0.3s;
     }
 
-    nav ul li a:hover {
-      color: #b8b8ff;
-    }
+    nav ul li a:hover { color: #b8b8ff; }
 
-    /* HERO */
+    /* =====================
+       HERO
+    ===================== */
     #hero {
       min-height: 100vh;
       background: radial-gradient(ellipse at top, #1a1a4e 0%, #0a0a2e 60%);
@@ -85,8 +83,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
     }
 
     .star-dot {
@@ -141,10 +138,7 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    .hero-btn:hover {
-      background: white;
-      color: #0a0a2e;
-    }
+    .hero-btn:hover { background: white; color: #0a0a2e; }
 
     .deco-star {
       position: absolute;
@@ -152,14 +146,9 @@
       opacity: 0.7;
     }
 
-    /* ABOUT SECTION */
-    #about {
-      background: #1a1a6e;
-      padding: 100px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
+    /* =====================
+       SHARED SECTION STYLES
+    ===================== */
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 52px;
@@ -179,6 +168,85 @@
       margin-bottom: 60px;
     }
 
+    .section-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e0e0ff;
+      max-width: 800px;
+      margin: 0 auto 24px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 30px;
+      border: 2px solid #b8b8ff;
+      border-radius: 30px;
+      color: #b8b8ff;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .back-btn:hover { background: #b8b8ff; color: #0a0a2e; }
+
+    /* image placeholder box */
+    .img-placeholder {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      background: #2a2a8e;
+      border: 2px dashed #b8b8ff;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 24px auto;
+      color: #b8b8ff;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* video placeholder box */
+    .video-placeholder {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      background: #1a1a4e;
+      border: 2px dashed #b8b8ff;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 24px auto;
+      color: #b8b8ff;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* real images when you add them */
+    .section-img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+      margin: 24px auto;
+      display: block;
+    }
+
+    /* =====================
+       ABOUT SECTION
+    ===================== */
+    #about {
+      background: #1a1a6e;
+      padding: 100px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
     .team-grid {
       display: flex;
       flex-wrap: wrap;
@@ -196,9 +264,7 @@
       transition: transform 0.3s;
     }
 
-    .team-card:hover {
-      transform: translateY(-10px);
-    }
+    .team-card:hover { transform: translateY(-10px); }
 
     .star-frame {
       width: 140px;
@@ -213,15 +279,9 @@
       position: relative;
     }
 
-    .team-card:hover .star-frame {
-      transform: rotate(15deg) scale(1.05);
-    }
+    .team-card:hover .star-frame { transform: rotate(15deg) scale(1.05); }
 
-    .star-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .star-frame img { width: 100%; height: 100%; object-fit: cover; }
 
     .initials {
       font-family: 'Playfair Display', serif;
@@ -230,9 +290,7 @@
       position: absolute;
     }
 
-    .initials.large {
-      font-size: 48px;
-    }
+    .initials.large { font-size: 48px; }
 
     .member-name {
       font-family: 'Playfair Display', serif;
@@ -252,7 +310,6 @@
       text-transform: uppercase;
     }
 
-    /* Bio popup */
     .bio-overlay {
       display: none;
       position: fixed;
@@ -264,9 +321,7 @@
       justify-content: center;
     }
 
-    .bio-overlay.active {
-      display: flex;
-    }
+    .bio-overlay.active { display: flex; }
 
     .bio-popup {
       background: #1a1a6e;
@@ -323,10 +378,238 @@
       position: relative;
     }
 
-    .bio-star-frame img {
+    .bio-star-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* =====================
+       PROJECT OVERVIEW
+    ===================== */
+    #overview {
+      background: #0a0a2e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    /* =====================
+       PROTOTYPE
+    ===================== */
+    #prototype {
+      background: #1a1a6e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .prototype-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .prototype-card {
+      background: #2a2a8e;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: left;
+    }
+
+    .prototype-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .prototype-card p {
+      font-size: 14px;
+      color: #e0e0ff;
+      line-height: 1.7;
+    }
+
+    .prototype-media {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: 200px;
+      background: #1a1a4e;
+      border: 2px dashed #b8b8ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b8b8ff;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* =====================
+       LITERATURE
+    ===================== */
+    #literature {
+      background: #0d0d3e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .lit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .lit-card {
+      background: #1a1a6e;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: left;
+      border-left: 4px solid #b8b8ff;
+    }
+
+    .lit-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .lit-card p {
+      font-size: 14px;
+      color: #e0e0ff;
+      line-height: 1.7;
+    }
+
+    /* =====================
+       EXPLODED VIEW
+    ===================== */
+    #exploded {
+      background: #1a1a6e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    /* =====================
+       SIMULATIONS
+    ===================== */
+    #simulations {
+      background: #0a0a2e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .sim-card {
+      background: #1a1a6e;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: left;
+    }
+
+    .sim-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #b8b8ff;
+      margin-bottom: 8px;
+    }
+
+    .sim-card .sim-label {
+      font-size: 11px;
+      color: #b8b8ff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .sim-card p {
+      font-size: 14px;
+      color: #e0e0ff;
+      line-height: 1.7;
+    }
+
+    .sim-media {
+      width: 100%;
+      height: 180px;
+      background: #0a0a2e;
+      border: 2px dashed #b8b8ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b8b8ff;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* =====================
+       CONTACT
+    ===================== */
+    #contact {
+      background: #1a1a6e;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: #2a2a8e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .contact-item p {
+      color: #e0e0ff;
+      font-size: 15px;
+    }
+
+    .contact-item a {
+      color: #b8b8ff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* =====================
+       SCROLL FADE IN
+    ===================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
   </style>
@@ -339,26 +622,28 @@
     <a href="#hero" class="logo">S.T.A.R. <span>lift</span></a>
     <ul>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#learn">Learn More</a></li>
+      <li><a href="#overview">Project</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#literature">Research</a></li>
+      <li><a href="#simulations">Simulations</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- =====================
+       HERO
+  ===================== -->
   <section id="hero">
-
     <div class="star-field" id="starField"></div>
 
     <svg class="deco-star" style="top:15%; left:8%; width:80px;" viewBox="0 0 100 100">
       <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
                fill="none" stroke="#b8b8ff" stroke-width="3"/>
     </svg>
-
     <svg class="deco-star" style="top:20%; right:10%; width:50px;" viewBox="0 0 100 100">
       <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
                fill="#b8b8ff" opacity="0.5"/>
     </svg>
-
     <svg class="deco-star" style="bottom:20%; left:15%; width:40px;" viewBox="0 0 100 100">
       <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
                fill="#ffffff" opacity="0.3"/>
@@ -366,73 +651,73 @@
 
     <h1 class="hero-title">S.T.A.R. <span>lift</span></h1>
     <p class="hero-subtitle">Self Transfer Automated Raising Lift</p>
-    <a href="#learn" class="hero-btn">Learn More</a>
-
+    <a href="#about" class="hero-btn">Learn More</a>
   </section>
 
-  <!-- ABOUT US -->
+  <!-- =====================
+       ABOUT US
+  ===================== -->
   <section id="about">
+    <h2 class="section-title fade-in">About Us</h2>
+    <p class="section-subtitle fade-in">Meet the team behind S.T.A.R. Lift</p>
 
-    <div class="about-container">
-      <h2 class="section-title">About Us</h2>
-      <p class="section-subtitle">Meet the team behind S.T.A.R. Lift</p>
+    <div class="team-grid">
 
-      <div class="team-grid">
-
-        <!-- TEAM MEMBER 1 -->
-        <div class="team-card" onclick="openBio('alexa')">
-          <div class="star-frame">
-            <img src="alexa.jpg" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
-            <span class="initials">AD</span>
-          </div>
-          <h3 class="member-name">Alexa Dumitriu</h3>
-          <p class="member-role">YOUR ROLE HERE</p>
+      <!-- ---- TEAM MEMBER 1 ---- -->
+      <!-- TO DO: replace 'alexa.jpg' with your actual photo filename -->
+      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
+      <div class="team-card fade-in" onclick="openBio('alexa')">
+        <div class="star-frame">
+          <img src="alexa.jpg" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
+          <span class="initials">AD</span>
         </div>
-
-        <!-- TEAM MEMBER 2 -->
-        <div class="team-card" onclick="openBio('kelsey')">
-          <div class="star-frame">
-            <img src="kelsey.jpg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
-            <span class="initials">KA</span>
-          </div>
-          <h3 class="member-name">Kelsey Anthony</h3>
-          <p class="member-role">YOUR ROLE HERE</p>
-        </div>
-
-        <!-- TEAM MEMBER 3 -->
-        <div class="team-card" onclick="openBio('manuella')">
-          <div class="star-frame">
-            <img src="manuella.jpg" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
-            <span class="initials">MK</span>
-          </div>
-          <h3 class="member-name">Manuella Kwawu</h3>
-          <p class="member-role">YOUR ROLE HERE</p>
-        </div>
-
-        <!-- TEAM MEMBER 4 -->
-        <div class="team-card" onclick="openBio('raquel')">
-          <div class="star-frame">
-            <img src="raquel.jpg" alt="Raquel Conard" onerror="this.style.display='none'"/>
-            <span class="initials">RC</span>
-          </div>
-          <h3 class="member-name">Raquel Conard</h3>
-          <p class="member-role">YOUR ROLE HERE</p>
-        </div>
-
-        <!-- TEAM MEMBER 5 -->
-        <div class="team-card" onclick="openBio('sophya')">
-          <div class="star-frame">
-            <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
-            <span class="initials">SE</span>
-          </div>
-          <h3 class="member-name">Sophya Elkihel</h3>
-          <p class="member-role">YOUR ROLE HERE</p>
-        </div>
-
+        <h3 class="member-name">Alexa Dumitriu</h3>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
+
+      <!-- ---- TEAM MEMBER 2 ---- -->
+      <div class="team-card fade-in" onclick="openBio('kelsey')">
+        <div class="star-frame">
+          <img src="kelsey.jpg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
+          <span class="initials">KA</span>
+        </div>
+        <h3 class="member-name">Kelsey Anthony</h3>
+        <p class="member-role">YOUR ROLE HERE</p>
+      </div>
+
+      <!-- ---- TEAM MEMBER 3 ---- -->
+      <div class="team-card fade-in" onclick="openBio('manuella')">
+        <div class="star-frame">
+          <img src="manuella.jpg" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
+          <span class="initials">MK</span>
+        </div>
+        <h3 class="member-name">Manuella Kwawu</h3>
+        <p class="member-role">YOUR ROLE HERE</p>
+      </div>
+
+      <!-- ---- TEAM MEMBER 4 ---- -->
+      <div class="team-card fade-in" onclick="openBio('raquel')">
+        <div class="star-frame">
+          <img src="raquel.jpg" alt="Raquel Conard" onerror="this.style.display='none'"/>
+          <span class="initials">RC</span>
+        </div>
+        <h3 class="member-name">Raquel Conard</h3>
+        <p class="member-role">YOUR ROLE HERE</p>
+      </div>
+
+      <!-- ---- TEAM MEMBER 5 ---- -->
+      <div class="team-card fade-in" onclick="openBio('sophya')">
+        <div class="star-frame">
+          <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
+          <span class="initials">SE</span>
+        </div>
+        <h3 class="member-name">Sophya Elkihel</h3>
+        <p class="member-role">YOUR ROLE HERE</p>
+      </div>
+
     </div>
 
-    <!-- BIO POPUP -->
+    <!-- Bio popup - opens when you click a team card -->
     <div class="bio-overlay" id="bioOverlay" onclick="closeBio()">
       <div class="bio-popup" onclick="event.stopPropagation()">
         <button class="bio-close" onclick="closeBio()">✕</button>
@@ -445,13 +730,254 @@
         <p id="bioBio"></p>
       </div>
     </div>
-
   </section>
 
-  <!-- JAVASCRIPT -->
+  <!-- =====================
+       PROJECT OVERVIEW
+  ===================== -->
+  <section id="overview">
+    <h2 class="section-title fade-in">Project Overview</h2>
+    <p class="section-subtitle fade-in">What it is, why we built it, and how it works</p>
+
+    <!-- TO DO: replace this text with your project overview paragraph -->
+    <p class="section-text fade-in">
+      WHAT IS IT — Write 1 paragraph describing what the S.T.A.R. Lift is. What does it do? What problem does it solve?
+    </p>
+
+    <!-- TO DO: replace this text with your motivation paragraph -->
+    <p class="section-text fade-in">
+      WHY WE BUILT IT — Write 1 paragraph explaining why you chose this problem. Who does it help? What inspired the team?
+    </p>
+
+    <!-- TO DO: replace this text with your how it works paragraph -->
+    <p class="section-text fade-in">
+      HOW IT WORKS — Write 1 paragraph explaining the mechanism. How does it lift, raise legs, and slide the user?
+    </p>
+
+    <!-- TO DO: replace src="render.jpg" with your actual SolidWorks Visualize render filename -->
+    <!-- TO DO: upload the render image to your GitHub repo with that same filename -->
+    <div class="img-placeholder fade-in">
+      ↑ Replace this with your SolidWorks Visualize render image
+      <!-- When ready: delete the div above and use this instead:
+      <img class="section-img" src="render.jpg" alt="S.T.A.R. Lift SolidWorks Render" />
+      -->
+    </div>
+
+    <a href="#hero" class="back-btn">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       PROTOTYPE
+  ===================== -->
+  <section id="prototype">
+    <h2 class="section-title fade-in">Prototype</h2>
+    <p class="section-subtitle fade-in">See the S.T.A.R. Lift in action</p>
+
+    <!-- TO DO: replace this text with your overall prototype description -->
+    <p class="section-text fade-in">
+      OVERALL DESCRIPTION — Write a paragraph describing the overall functionality of your prototype. What does it do end to end?
+    </p>
+
+    <!-- TO DO: embed your main demo video here -->
+    <!-- Option 1 - YouTube: replace VIDEO_ID with your YouTube video ID -->
+    <!-- <iframe width="700" height="400" style="border-radius:16px; display:block; margin:0 auto 40px;"
+      src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+    <!-- Option 2 - upload video file to GitHub and use: -->
+    <!-- <video controls style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+      <source src="demo.mp4" type="video/mp4">
+    </video> -->
+    <div class="video-placeholder fade-in">↑ Paste your main demo video here (see comments above)</div>
+
+    <!-- Individual component cards - add as many as you need -->
+    <div class="prototype-grid">
+
+      <!-- ---- COMPONENT 1 ---- -->
+      <!-- TO DO: replace placeholder text and add image/video -->
+      <div class="prototype-card fade-in">
+        <!-- TO DO: add image or video of this component -->
+        <div class="prototype-media">Image / Video Here</div>
+        <h4>Lifting Mechanism</h4>
+        <!-- TO DO: describe how the lifting mechanism works -->
+        <p>Describe how the lifting mechanism works and what you can see in the image/video above.</p>
+      </div>
+
+      <!-- ---- COMPONENT 2 ---- -->
+      <div class="prototype-card fade-in">
+        <div class="prototype-media">Image / Video Here</div>
+        <h4>Leg Raise Mechanism</h4>
+        <!-- TO DO: describe the leg raise mechanism -->
+        <p>Describe how the leg raise mechanism works and what you can see in the image/video above.</p>
+      </div>
+
+      <!-- ---- COMPONENT 3 ---- -->
+      <div class="prototype-card fade-in">
+        <div class="prototype-media">Image / Video Here</div>
+        <h4>Transfer / Sliding Mechanism</h4>
+        <!-- TO DO: describe the sliding/transfer mechanism -->
+        <p>Describe how the sliding transfer mechanism works and what you can see in the image/video above.</p>
+      </div>
+
+      <!-- ---- ADD MORE COMPONENTS HERE if needed ---- -->
+
+    </div>
+
+    <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       LITERATURE & PRIOR ART
+  ===================== -->
+  <section id="literature">
+    <h2 class="section-title fade-in">Literature & Prior Art</h2>
+    <p class="section-subtitle fade-in">Research, motivation, and what makes us different</p>
+
+    <!-- TO DO: write your motivation paragraph - why did you choose this problem? -->
+    <p class="section-text fade-in">
+      MOTIVATION — Why did you choose this problem? Include stats or facts about the population affected (e.g. how many wheelchair users need assisted transfers, caregiver injury rates, etc.)
+    </p>
+
+    <div class="lit-grid">
+
+      <!-- ---- PRIOR ART 1 ---- -->
+      <!-- TO DO: fill in the closest existing product/patent and explain how yours is better -->
+      <div class="lit-card fade-in">
+        <h4>Existing Product / Patent Name</h4>
+        <p>Describe what this product or patent does, and explain how the S.T.A.R. Lift is different and better.</p>
+      </div>
+
+      <!-- ---- PRIOR ART 2 ---- -->
+      <div class="lit-card fade-in">
+        <h4>Existing Product / Patent Name</h4>
+        <p>Describe what this product or patent does, and explain how the S.T.A.R. Lift is different and better.</p>
+      </div>
+
+      <!-- ---- PRIOR ART 3 ---- -->
+      <div class="lit-card fade-in">
+        <h4>Existing Product / Patent Name</h4>
+        <p>Describe what this product or patent does, and explain how the S.T.A.R. Lift is different and better.</p>
+      </div>
+
+      <!-- ---- ADD MORE PRIOR ART HERE if needed ---- -->
+
+    </div>
+
+    <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       EXPLODED VIEW
+  ===================== -->
+  <section id="exploded">
+    <h2 class="section-title fade-in">Exploded View</h2>
+    <p class="section-subtitle fade-in">Key components of the S.T.A.R. Lift</p>
+
+    <!-- TO DO: write a short intro sentence about the exploded view -->
+    <p class="section-text fade-in">
+      The exploded view below shows all key components of the S.T.A.R. Lift. Each part is labeled and described.
+    </p>
+
+    <!-- TO DO: upload your exploded view image to GitHub and replace 'exploded.jpg' -->
+    <!-- TO DO: delete the placeholder div and uncomment the img tag below -->
+    <div class="img-placeholder fade-in">
+      ↑ Replace this with your SolidWorks exploded view image
+      <!-- When ready: delete this div and use:
+      <img class="section-img" src="exploded.jpg" alt="S.T.A.R. Lift Exploded View" />
+      -->
+    </div>
+
+    <!-- TO DO: if you have a second exploded view image, add it here -->
+    <!-- <img class="section-img" src="exploded2.jpg" alt="S.T.A.R. Lift Exploded View 2" /> -->
+
+    <a href="#hero" class="back-btn" style="margin-top:40px; display:inline-block;">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       SIMULATIONS & EXPERIMENTS
+  ===================== -->
+  <section id="simulations">
+    <h2 class="section-title fade-in">Simulations & Experiments</h2>
+    <p class="section-subtitle fade-in">How testing shaped our design decisions</p>
+
+    <!-- TO DO: write a short intro paragraph -->
+    <p class="section-text fade-in">
+      INTRO — Briefly describe the types of simulations and experiments your team ran and why they were important to the design process.
+    </p>
+
+    <div class="sim-grid">
+
+      <!-- ---- STUDY 1 ---- -->
+      <!-- Each card = one simulation or experiment -->
+      <!-- TO DO: fill in all 4 fields for each study -->
+      <div class="sim-card fade-in">
+        <div class="sim-media">Image / Video of Study Here</div>
+        <p class="sim-label">Study 1</p>
+        <h4>Name of Simulation / Experiment</h4>
+        <p><strong>Question:</strong> What question were you investigating?</p>
+        <p><strong>Method:</strong> How did you perform this study?</p>
+        <p><strong>Result:</strong> What did you find, and what design decision did it lead to?</p>
+      </div>
+
+      <!-- ---- STUDY 2 ---- -->
+      <div class="sim-card fade-in">
+        <div class="sim-media">Image / Video of Study Here</div>
+        <p class="sim-label">Study 2</p>
+        <h4>Name of Simulation / Experiment</h4>
+        <p><strong>Question:</strong> What question were you investigating?</p>
+        <p><strong>Method:</strong> How did you perform this study?</p>
+        <p><strong>Result:</strong> What did you find, and what design decision did it lead to?</p>
+      </div>
+
+      <!-- ---- STUDY 3 ---- -->
+      <div class="sim-card fade-in">
+        <div class="sim-media">Image / Video of Study Here</div>
+        <p class="sim-label">Study 3</p>
+        <h4>Name of Simulation / Experiment</h4>
+        <p><strong>Question:</strong> What question were you investigating?</p>
+        <p><strong>Method:</strong> How did you perform this study?</p>
+        <p><strong>Result:</strong> What did you find, and what design decision did it lead to?</p>
+      </div>
+
+      <!-- ---- ADD MORE STUDIES HERE if needed ---- -->
+
+    </div>
+
+    <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       CONTACT
+  ===================== -->
+  <section id="contact">
+    <h2 class="section-title fade-in">Contact Us</h2>
+    <p class="section-subtitle fade-in">Get in touch with the S.T.A.R. Lift team</p>
+
+    <div class="contact-grid">
+
+      <!-- TO DO: replace with your real team email -->
+      <div class="contact-item fade-in">
+        <div class="contact-icon">✉️</div>
+        <p>Email</p>
+        <a href="mailto:yourteamemail@gmail.com">yourteamemail@gmail.com</a>
+      </div>
+
+      <!-- TO DO: replace with your real phone number (or remove this block if not needed) -->
+      <div class="contact-item fade-in">
+        <div class="contact-icon">📞</div>
+        <p>Phone</p>
+        <a href="tel:1234567890">123-456-7890</a>
+      </div>
+
+    </div>
+
+    <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
+  </section>
+
+  <!-- =====================
+       JAVASCRIPT
+  ===================== -->
   <script>
 
-    // Generate twinkling stars
+    // --- Twinkling star background ---
     const starField = document.getElementById('starField');
     for (let i = 0; i < 120; i++) {
       const star = document.createElement('div');
@@ -466,46 +992,58 @@
       starField.appendChild(star);
     }
 
-    // Team bio data
+    // --- Scroll fade-in animation ---
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(el => observer.observe(el));
+
+    // --- Team bio data ---
+    // TO DO: fill in role and bio for each team member
     const bioData = {
       alexa: {
         name: 'Alexa Dumitriu',
-        role: 'YOUR ROLE HERE',
-        bio: 'YOUR BIO HERE. 2-3 sentences about Alexa.',
-        img: 'alexa.jpg',
+        role: 'YOUR ROLE HERE',           // e.g. 'Lead Mechanical Engineer'
+        bio:  'YOUR BIO HERE.',           // 2-3 sentences
+        img:  'alexa.jpg',
         initials: 'AD'
       },
       kelsey: {
         name: 'Kelsey Anthony',
         role: 'YOUR ROLE HERE',
-        bio: 'YOUR BIO HERE. 2-3 sentences about Kelsey.',
-        img: 'kelsey.jpg',
+        bio:  'YOUR BIO HERE.',
+        img:  'kelsey.jpg',
         initials: 'KA'
       },
       manuella: {
         name: 'Manuella Kwawu',
         role: 'YOUR ROLE HERE',
-        bio: 'YOUR BIO HERE. 2-3 sentences about Manuella.',
-        img: 'manuella.jpg',
+        bio:  'YOUR BIO HERE.',
+        img:  'manuella.jpg',
         initials: 'MK'
       },
       raquel: {
         name: 'Raquel Conard',
         role: 'YOUR ROLE HERE',
-        bio: 'YOUR BIO HERE. 2-3 sentences about Raquel.',
-        img: 'raquel.jpg',
+        bio:  'YOUR BIO HERE.',
+        img:  'raquel.jpg',
         initials: 'RC'
       },
       sophya: {
         name: 'Sophya Elkihel',
         role: 'YOUR ROLE HERE',
-        bio: 'YOUR BIO HERE. 2-3 sentences about Sophya.',
-        img: 'sophya.jpg',
+        bio:  'YOUR BIO HERE.',
+        img:  'sophya.jpg',
         initials: 'SE'
       }
     };
 
-    // Open bio popup
+    // --- Open bio popup ---
     function openBio(name) {
       const person = bioData[name];
       document.getElementById('bioName').textContent     = person.name;
@@ -516,7 +1054,7 @@
       document.getElementById('bioOverlay').classList.add('active');
     }
 
-    // Close bio popup
+    // --- Close bio popup ---
     function closeBio() {
       document.getElementById('bioOverlay').classList.remove('active');
     }
