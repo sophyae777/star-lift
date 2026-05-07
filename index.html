@@ -251,6 +251,17 @@
       position: relative;
       overflow: hidden;
     }
+#about::before {
+      content: '✳ ✳ ✳';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      color: #7eb8f7;
+      opacity: 0.4;
+      letter-spacing: 20px;
+    }
 
     /* dark text for light background */
     #about .section-title { color: #0a0a2e; }
@@ -275,12 +286,14 @@
       transition: transform 0.3s;
     }
 
-    .team-card:hover { transform: translateY(-10px); }
-
-    .star-frame {
+.team-card:hover .star-frame {
+      transform: scale(1.05);
+      border-color: #b8b8ff;
+    }
+.star-frame {
       width: 140px;
       height: 140px;
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      border-radius: 50%;
       background: #2a2a8e;
       display: flex;
       align-items: center;
@@ -288,6 +301,7 @@
       overflow: hidden;
       transition: transform 0.3s;
       position: relative;
+      border: 3px solid #7eb8f7;
     }
 
     .team-card:hover .star-frame { transform: rotate(15deg) scale(1.05); }
