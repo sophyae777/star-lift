@@ -16,6 +16,7 @@
       background-color: #0a0a2e;
       color: white;
       overflow-x: hidden;
+      cursor: crosshair;
     }
 
     /* =====================
@@ -149,14 +150,6 @@
     /* =====================
        SHARED SECTION STYLES
     ===================== */
-    .section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #7eb8f7;
-  margin: 12px auto 0;
-}
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 52px;
@@ -165,6 +158,15 @@
       text-transform: uppercase;
       color: white;
       margin-bottom: 8px;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #7eb8f7;
+      margin: 12px auto 0;
     }
 
     .section-subtitle {
@@ -251,7 +253,8 @@
       position: relative;
       overflow: hidden;
     }
-#about::before {
+
+    #about::before {
       content: '✳ ✳ ✳';
       position: absolute;
       top: 20px;
@@ -263,7 +266,6 @@
       letter-spacing: 20px;
     }
 
-    /* dark text for light background */
     #about .section-title { color: #0a0a2e; }
     #about .section-subtitle { color: #3a3a8e; }
     #about .member-name { color: #0a0a2e; }
@@ -286,11 +288,9 @@
       transition: transform 0.3s;
     }
 
-.team-card:hover .star-frame {
-      transform: scale(1.05);
-      border-color: #b8b8ff;
-    }
-.star-frame {
+    .team-card:hover { transform: translateY(-10px); }
+
+    .star-frame {
       width: 140px;
       height: 140px;
       border-radius: 50%;
@@ -304,18 +304,12 @@
       border: 3px solid #7eb8f7;
     }
 
-    .team-card:hover .star-frame { transform: rotate(15deg) scale(1.05); }
-
-    .star-frame img { width: 100%; height: 100%; object-fit: cover; }
-
-    .initials {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: #b8b8ff;
-      position: absolute;
+    .team-card:hover .star-frame {
+      transform: scale(1.05);
+      border-color: #b8b8ff;
     }
 
-    .initials.large { font-size: 48px; }
+    .star-frame img { width: 100%; height: 100%; object-fit: cover; }
 
     .member-name {
       font-family: 'Playfair Display', serif;
@@ -393,7 +387,7 @@
     .bio-star-frame {
       width: 120px;
       height: 120px;
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      border-radius: 50%;
       background: #2a2a8e;
       display: flex;
       align-items: center;
@@ -401,6 +395,7 @@
       margin: 0 auto;
       overflow: hidden;
       position: relative;
+      border: 3px solid #7eb8f7;
     }
 
     .bio-star-frame img { width: 100%; height: 100%; object-fit: cover; }
@@ -423,7 +418,6 @@
       text-align: center;
     }
 
-    /* dark text for light background */
     #prototype .section-title { color: #0a0a2e; }
     #prototype .section-subtitle { color: #3a3a8e; }
     #prototype .section-text { color: #1a1a4e; }
@@ -521,7 +515,6 @@
       text-align: center;
     }
 
-    /* dark text for light background */
     #exploded .section-title { color: #0a0a2e; }
     #exploded .section-subtitle { color: #3a3a8e; }
     #exploded .section-text { color: #1a1a4e; }
@@ -654,62 +647,49 @@
     <div class="team-grid">
 
       <!-- ---- TEAM MEMBER 1 ---- -->
-      <!-- TO DO: replace 'alexa.jpg' with your actual photo filename -->
-      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
+      <!-- TO DO: update bio in the JavaScript section below -->
       <div class="team-card fade-in" onclick="openBio('alexa')">
         <div class="star-frame">
           <img src="Alexa_Headshot.jpg" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
         </div>
         <h3 class="member-name">Alexa Dumitriu</h3>
-        <p class="member-role">bio</p>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
       <!-- ---- TEAM MEMBER 2 ---- -->
-      <!-- TO DO: replace 'kelsey.jpg' with your actual photo filename -->
-      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('kelsey')">
         <div class="star-frame">
           <img src="Kelsey-Anthony-Photo.jpeg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
-  
         </div>
         <h3 class="member-name">Kelsey Anthony</h3>
-        <p class="member-role">bio</p>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
       <!-- ---- TEAM MEMBER 3 ---- -->
-      <!-- TO DO: replace 'manuella.jpg' with your actual photo filename -->
-      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('manuella')">
         <div class="star-frame">
           <img src="ManuellaKwawuHeadshot.png" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
-        
         </div>
         <h3 class="member-name">Manuella Kwawu</h3>
-        <p class="member-role">bio</p>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
       <!-- ---- TEAM MEMBER 4 ---- -->
-      <!-- TO DO: replace 'raquel.jpg' with your actual photo filename -->
-      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('raquel')">
         <div class="star-frame">
           <img src="Raquel_Headshot.JPG" alt="Raquel Conard" onerror="this.style.display='none'"/>
-          
         </div>
         <h3 class="member-name">Raquel Conard</h3>
-        <p class="member-role">bio</p>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
       <!-- ---- TEAM MEMBER 5 ---- -->
-      <!-- TO DO: replace 'sophya.jpg' with your actual photo filename -->
-      <!-- TO DO: replace 'YOUR ROLE HERE' with her role -->
       <div class="team-card fade-in" onclick="openBio('sophya')">
         <div class="star-frame">
           <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
-         
         </div>
         <h3 class="member-name">Sophya Elkihel</h3>
-        <p class="member-role">bio</p>
+        <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
     </div>
@@ -720,7 +700,6 @@
         <button class="bio-close" onclick="closeBio()">✕</button>
         <div class="bio-star-frame">
           <img id="bioImg" src="" alt=""/>
-          <span id="bioInitials" class="initials large"></span>
         </div>
         <h3 id="bioName"></h3>
         <p id="bioRole"></p>
@@ -751,14 +730,8 @@
       HOW IT WORKS; user experience and mechanisms
     </p>
 
-    <!-- TO DO: upload your render image to GitHub and replace 'render.jpg' with your filename -->
-    <!-- TO DO: delete the placeholder div below and uncomment the img tag -->
-    <div class="img-placeholder fade-in">
-     
-     
-      <img class="section-img" src="slidingpanels-photo3.PNG" alt="S.T.A.R. Lift SolidWorks Render" />
-  
-    </div>
+    <!-- TO DO: replace render.jpg with your actual SolidWorks Visualize render filename -->
+    <img class="section-img fade-in" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift SolidWorks Render" />
 
     <a href="#hero" class="back-btn">Back to Top</a>
   </section>
@@ -788,29 +761,24 @@
     <div class="prototype-grid">
 
       <!-- ---- COMPONENT 1 ---- -->
-      <!-- TO DO: replace placeholder text and add image/video -->
+      <!-- TO DO: replace placeholder and add image/video -->
       <div class="prototype-card fade-in">
         <div class="prototype-media">Image / Video Here</div>
         <h4>Lifting Mechanism</h4>
-        <!-- TO DO: describe how the lifting mechanism works -->
         <p>how scissor lift works</p>
       </div>
 
       <!-- ---- COMPONENT 2 ---- -->
-      <!-- TO DO: replace placeholder text and add image/video -->
       <div class="prototype-card fade-in">
         <div class="prototype-media">Image / Video Here</div>
         <h4>Leg Raise Mechanism</h4>
-        <!-- TO DO: describe the leg raise mechanism -->
         <p>how leg panel works</p>
       </div>
 
       <!-- ---- COMPONENT 3 ---- -->
-      <!-- TO DO: replace placeholder text and add image/video -->
       <div class="prototype-card fade-in">
         <div class="prototype-media">Image / Video Here</div>
         <h4>Transfer / Sliding Mechanism</h4>
-        <!-- TO DO: describe the sliding/transfer mechanism -->
         <p>how linear actuator works</p>
       </div>
 
@@ -820,7 +788,7 @@
   </section>
 
   <!-- =====================
-       LITERATURE/ PRIOR ART
+       LITERATURE & PRIOR ART
   ===================== -->
   <section id="literature">
     <h2 class="section-title fade-in">Literature & Prior Art</h2>
@@ -834,7 +802,6 @@
     <div class="lit-grid">
 
       <!-- ---- PRIOR ART 1 ---- -->
-      <!-- TO DO: fill in product/patent name and explanation -->
       <div class="lit-card fade-in">
         <h4>Existing Product / Patent Name</h4>
         <p>what it does, why star lift is better and different</p>
@@ -864,21 +831,15 @@
   ===================== -->
   <section id="exploded">
     <h2 class="section-title fade-in">Exploded View</h2>
-    <p class="section-subtitle fade-in">Key components, label the exploded view?</p>
+    <p class="section-subtitle fade-in">Key components of the S.T.A.R. Lift</p>
 
     <!-- TO DO: write a short intro sentence -->
     <p class="section-text fade-in">
-      blah blah here are key components Each part is labeled and described blah blah.
+      blah blah here are key components. Each part is labeled and described blah blah.
     </p>
 
-    <!-- TO DO: upload exploded view image to GitHub and replace 'exploded.jpg' -->
-    <!-- TO DO: delete the placeholder div and uncomment the img tag -->
-    <div class="img-placeholder fade-in">
-   
-      
-      <img class="section-img" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift Exploded View" />
-    
-    </div>
+    <!-- TO DO: replace with your actual exploded view image filename -->
+    <img class="section-img fade-in" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift Exploded View" />
 
     <!-- TO DO: add a second exploded view image if you have one -->
     <!-- <img class="section-img" src="exploded2.jpg" alt="S.T.A.R. Lift Exploded View 2" /> -->
@@ -901,10 +862,9 @@
     <div class="sim-grid">
 
       <!-- ---- STUDY 1 ---- -->
-      <!-- TO DO: fill in all 4 fields -->
       <div class="sim-card fade-in">
         <div class="sim-media">analysis pic here</div>
-        <p class="sim-label">analysis 1</p>
+        <p class="sim-label">Analysis 1</p>
         <h4>title</h4>
         <p><strong>Question:</strong> What question investigating?</p>
         <p><strong>Method:</strong> How perform this study?</p>
@@ -914,7 +874,7 @@
       <!-- ---- STUDY 2 ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
-        <p class="sim-label">Study 2</p>
+        <p class="sim-label">Analysis 2</p>
         <h4>title</h4>
         <p><strong>Question:</strong> What question investigating?</p>
         <p><strong>Method:</strong> How perform this study?</p>
@@ -924,7 +884,7 @@
       <!-- ---- STUDY 3 ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
-        <p class="sim-label">Study 3</p>
+        <p class="sim-label">Analysis 3</p>
         <h4>title</h4>
         <p><strong>Question:</strong> What question investigating?</p>
         <p><strong>Method:</strong> How perform this study?</p>
@@ -939,7 +899,7 @@
   </section>
 
   <!-- =====================
-       JAVASCRIPT for behavior
+       JAVASCRIPT
   ===================== -->
   <script>
 
@@ -976,47 +936,41 @@
         name: 'Alexa Dumitriu',
         role: 'YOUR ROLE HERE',
         bio:  'YOUR BIO HERE.',
-        img:  'alexa.jpg',
-        initials: 'AD'
+        img:  'Alexa_Headshot.jpg'
       },
       kelsey: {
         name: 'Kelsey Anthony',
         role: 'YOUR ROLE HERE',
         bio:  'YOUR BIO HERE.',
-        img:  'kelsey.jpg',
-        initials: 'KA'
+        img:  'Kelsey-Anthony-Photo.jpeg'
       },
       manuella: {
         name: 'Manuella Kwawu',
         role: 'YOUR ROLE HERE',
         bio:  'YOUR BIO HERE.',
-        img:  'manuella.jpg',
-        initials: 'MK'
+        img:  'ManuellaKwawuHeadshot.png'
       },
       raquel: {
         name: 'Raquel Conard',
         role: 'YOUR ROLE HERE',
         bio:  'YOUR BIO HERE.',
-        img:  'raquel.jpg',
-        initials: 'RC'
+        img:  'Raquel_Headshot.JPG'
       },
       sophya: {
         name: 'Sophya Elkihel',
         role: 'YOUR ROLE HERE',
         bio:  'YOUR BIO HERE.',
-        img:  'sophya.jpg',
-        initials: 'SE'
+        img:  'sophya.jpg'
       }
     };
 
     // --- Open bio popup ---
     function openBio(name) {
       const person = bioData[name];
-      document.getElementById('bioName').textContent     = person.name;
-      document.getElementById('bioRole').textContent     = person.role;
-      document.getElementById('bioBio').textContent      = person.bio;
-      document.getElementById('bioImg').src              = person.img;
-      document.getElementById('bioInitials').textContent = person.initials;
+      document.getElementById('bioName').textContent = person.name;
+      document.getElementById('bioRole').textContent = person.role;
+      document.getElementById('bioBio').textContent  = person.bio;
+      document.getElementById('bioImg').src          = person.img;
       document.getElementById('bioOverlay').classList.add('active');
     }
 
@@ -1025,8 +979,7 @@
       document.getElementById('bioOverlay').classList.remove('active');
     }
 
-  
-// --- Click star burst animation ---
+    // --- Click star burst animation ---
     document.addEventListener('click', function(e) {
       const star = document.createElement('div');
       star.innerHTML = `
@@ -1053,6 +1006,7 @@
 
       setTimeout(() => star.remove(), 800);
     });
-    </script>
+
+  </script>
 </body>
 </html>
