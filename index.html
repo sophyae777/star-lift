@@ -20,7 +20,7 @@
     }
 
     /* =====================
-       NAV bar
+       NAV
     ===================== */
     nav {
       position: fixed;
@@ -245,7 +245,7 @@
     }
 
     /* =====================
-       ABOUT SECTION — light lavender
+       ABOUT — light lavender
     ===================== */
     #about {
       background: #c8c8f0;
@@ -299,7 +299,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      transition: transform 0.3s;
+      transition: transform 0.3s, border-color 0.3s;
       position: relative;
       border: 3px solid #7eb8f7;
     }
@@ -530,7 +530,7 @@
       text-align: center;
     }
 
- .sim-grid {
+    .sim-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
@@ -564,6 +564,7 @@
       font-size: 14px;
       color: #e0e0ff;
       line-height: 1.7;
+      margin-bottom: 6px;
     }
 
     .sim-media {
@@ -609,6 +610,7 @@
       <li><a href="#overview">Project</a></li>
       <li><a href="#prototype">Prototype</a></li>
       <li><a href="#literature">Research</a></li>
+      <li><a href="#exploded">Exploded View</a></li>
       <li><a href="#analysis">Analysis</a></li>
     </ul>
   </nav>
@@ -646,17 +648,15 @@
 
     <div class="team-grid">
 
-      <!-- ---- TEAM MEMBER 1 ---- -->
-      <!-- TO DO: update bio in the JavaScript section below -->
       <div class="team-card fade-in" onclick="openBio('alexa')">
         <div class="star-frame">
           <img src="Alexa_Headshot.jpg" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
         </div>
         <h3 class="member-name">Alexa Dumitriu</h3>
+        <!-- TO DO: replace with her role -->
         <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
-      <!-- ---- TEAM MEMBER 2 ---- -->
       <div class="team-card fade-in" onclick="openBio('kelsey')">
         <div class="star-frame">
           <img src="Kelsey-Anthony-Photo.jpeg" alt="Kelsey Anthony" onerror="this.style.display='none'"/>
@@ -665,7 +665,6 @@
         <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
-      <!-- ---- TEAM MEMBER 3 ---- -->
       <div class="team-card fade-in" onclick="openBio('manuella')">
         <div class="star-frame">
           <img src="ManuellaKwawuHeadshot.png" alt="Manuella Kwawu" onerror="this.style.display='none'"/>
@@ -674,7 +673,6 @@
         <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
-      <!-- ---- TEAM MEMBER 4 ---- -->
       <div class="team-card fade-in" onclick="openBio('raquel')">
         <div class="star-frame">
           <img src="Raquel_Headshot.JPG" alt="Raquel Conard" onerror="this.style.display='none'"/>
@@ -683,7 +681,6 @@
         <p class="member-role">YOUR ROLE HERE</p>
       </div>
 
-      <!-- ---- TEAM MEMBER 5 ---- -->
       <div class="team-card fade-in" onclick="openBio('sophya')">
         <div class="star-frame">
           <img src="sophya.jpg" alt="Sophya Elkihel" onerror="this.style.display='none'"/>
@@ -694,7 +691,7 @@
 
     </div>
 
-    <!-- Bio popup - opens when you click a team card -->
+    <!-- Bio popup -->
     <div class="bio-overlay" id="bioOverlay" onclick="closeBio()">
       <div class="bio-popup" onclick="event.stopPropagation()">
         <button class="bio-close" onclick="closeBio()">✕</button>
@@ -715,25 +712,22 @@
     <h2 class="section-title fade-in">Project Overview</h2>
     <p class="section-subtitle fade-in">What it is, why we built it, and how it works</p>
 
-    <!-- TO DO: replace this text with your project overview paragraph -->
     <p class="section-text fade-in">
-      WHAT IS IT; What does it do? What problem does it solve?
+      The S.T.A.R. Lift — Self Transfer Automated Raising Lift — is a retrofit attachment for standard wheelchairs that enables users to independently transfer themselves from their wheelchair to a bed, and back again, without the assistance of a caregiver. By simply clamping onto an existing wheelchair, the device restores a fundamental sense of independence to users who would otherwise rely entirely on another person for one of the most routine parts of their day.
     </p>
 
-    <!-- TO DO: replace this text with your motivation paragraph -->
     <p class="section-text fade-in">
-      WHY WE BUILT IT; why we chose this problem. Who does it help? What inspired us?
+      Living in New York City, our team constantly noticed the gap between the city's promises of accessibility and the reality on the ground — from inaccessible subway stations to spaces that simply weren't designed with wheelchair users in mind. When we dove deeper into the research, we found that bed-to-chair transfers were one of the most overlooked problems in this space. They happen multiple times a day, every day, and they take a serious toll — both on caregivers, who suffer high rates of musculoskeletal injuries from repeated manual lifting, and on users, whose independence and dignity are affected every time they need to ask for help. We built the S.T.A.R. Lift to change that.
     </p>
 
-    <!-- TO DO: replace this text with your how it works paragraph -->
     <p class="section-text fade-in">
-      HOW IT WORKS; user experience and mechanisms
+      Using the S.T.A.R. Lift is straightforward. The device clamps directly onto the user's wheelchair — no heavy installation required. Once positioned next to the bed, the user raises their legs to a horizontal position using the leg raising panel, controlled by a handheld remote. Next, they press a button to activate the scissor lift, which raises them to the height of the bed. The linear actuator then slides them laterally over the bed surface. Throughout the entire process, fully adjustable arm supports provide stability and upper body support, allowing the user to shift themselves safely onto the bed. Every step is designed to be repeatable, predictable, and entirely in the user's control.
     </p>
 
-    <!-- TO DO: replace render.jpg with your actual SolidWorks Visualize render filename -->
+    <!-- TO DO: replace with your actual SolidWorks Visualize render filename -->
     <img class="section-img fade-in" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift SolidWorks Render" />
 
-    <a href="#hero" class="back-btn">Back to Top</a>
+    <a href="#hero" class="back-btn fade-in">Back to Top</a>
   </section>
 
   <!-- =====================
@@ -743,43 +737,47 @@
     <h2 class="section-title fade-in">Prototype</h2>
     <p class="section-subtitle fade-in">See the S.T.A.R. Lift in action</p>
 
-    <!-- TO DO: replace this text with your overall prototype description -->
     <p class="section-text fade-in">
-      OVERALL DESCRIPTION; beginning to end of how it works.
+      Our prototype demonstrates the full transfer sequence from wheelchair to bed. Starting from a seated position, the user activates each mechanism in sequence — leg raise, lift, slide — arriving safely over the bed surface with arm support throughout. The video below shows the complete functionality of the prototype end to end.
     </p>
 
-    <!-- TO DO: embed your main demo video here -->
-    <!-- Option 1 - YouTube: replace VIDEO_ID with your YouTube video ID -->
+    <!-- TO DO: replace VIDEO_ID with your actual YouTube video ID -->
     <!-- <iframe width="700" height="400" style="border-radius:16px; display:block; margin:0 auto 40px;"
       src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-    <!-- Option 2 - upload video file to GitHub and use: -->
-    <!-- <video controls style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
-      <source src="demo.mp4" type="video/mp4">
-    </video> -->
-    <div class="video-placeholder fade-in">↑ put main vid here (one from vid assignment)</div>
+    <div class="video-placeholder fade-in">↑ paste your YouTube video ID here when ready</div>
 
     <div class="prototype-grid">
 
-      <!-- ---- COMPONENT 1 ---- -->
-      <!-- TO DO: replace placeholder and add image/video -->
+      <!-- ---- SCISSOR LIFT ---- -->
       <div class="prototype-card fade-in">
+        <!-- TO DO: add image or video of scissor lift -->
         <div class="prototype-media">Image / Video Here</div>
-        <h4>Lifting Mechanism</h4>
-        <p>how scissor lift works</p>
+        <h4>Scissor Lift</h4>
+        <p>The scissor lift raises the user from wheelchair height to bed height at the press of a button. It is electrically actuated using a DC motor, making the lift smooth and effortless for the user.</p>
       </div>
 
-      <!-- ---- COMPONENT 2 ---- -->
+      <!-- ---- LEG RAISING PANEL ---- -->
       <div class="prototype-card fade-in">
+        <!-- TO DO: add image or video of leg panel -->
         <div class="prototype-media">Image / Video Here</div>
-        <h4>Leg Raise Mechanism</h4>
-        <p>how leg panel works</p>
+        <h4>Leg Raising Panel</h4>
+        <p>The leg raising panel rotates the user's legs up 180 degrees to a position parallel with the bed surface. It is electrically actuated using a servo motor and controlled via handheld remote.</p>
       </div>
 
-      <!-- ---- COMPONENT 3 ---- -->
+      <!-- ---- LINEAR ACTUATOR ---- -->
       <div class="prototype-card fade-in">
+        <!-- TO DO: add image or video of sliding mechanism -->
         <div class="prototype-media">Image / Video Here</div>
-        <h4>Transfer / Sliding Mechanism</h4>
-        <p>how linear actuator works</p>
+        <h4>Sliding Mechanism</h4>
+        <p>The linear actuator slides the user laterally from the wheelchair over to the bed surface. Controlled via remote, this mechanism handles the full lateral transfer smoothly and safely.</p>
+      </div>
+
+      <!-- ---- ARM SUPPORT ---- -->
+      <div class="prototype-card fade-in">
+        <!-- TO DO: add image or video of arm support -->
+        <div class="prototype-media">Image / Video Here</div>
+        <h4>Arm Support</h4>
+        <p>The arm supports are the only mechanically actuated component of the device. Fully adjustable in height, length, and position, one side swings out to assist the user in shifting onto the bed. They lock securely in any position and provide stability throughout the entire transfer.</p>
       </div>
 
     </div>
@@ -794,32 +792,26 @@
     <h2 class="section-title fade-in">Literature & Prior Art</h2>
     <p class="section-subtitle fade-in">Research, motivation, and what makes us different</p>
 
-    <!-- TO DO: write your motivation paragraph -->
     <p class="section-text fade-in">
-      MOTIVATION; why this problem? stats/facts (e.g. how many wheelchair users need assisted transfers, caregiver injury rates, etc.)
+      In the U.S., about 5.5 million people rely on a wheelchair for mobility, and a significant portion require assisted transfers multiple times a day. Research shows that providing transfer assistance has caused work-related injuries in more than 78% of physical therapists and their assistants at rehabilitation facilities. Beyond caregiver injuries, the lack of independence experienced by users during transfers affects their dignity and quality of life daily. Living in New York City, our team saw this gap firsthand — and set out to design a solution that puts control back in the hands of the user.
     </p>
 
     <div class="lit-grid">
 
-      <!-- ---- PRIOR ART 1 ---- -->
       <div class="lit-card fade-in">
-        <h4>Existing Product / Patent Name</h4>
-        <p>what it does, why star lift is better and different</p>
+        <h4>Transfer Boards</h4>
+        <p>Transfer boards allow users to slide between surfaces, but they require significant trunk control, balance, and upper body strength. This limits their accessibility and makes them unreliable for users with more severe mobility impairments. The S.T.A.R. Lift requires none of these — the mechanisms do the work.</p>
       </div>
 
-      <!-- ---- PRIOR ART 2 ---- -->
       <div class="lit-card fade-in">
-        <h4>Existing Product / Patent Name</h4>
-        <p>what it does, why star lift is better and different</p>
+        <h4>Hoists & Slings</h4>
+        <p>Hoists lift users via a sling system but require a caregiver to operate them at all times, doing nothing to restore user independence. They are also slow, cumbersome, and can feel undignified for users. The S.T.A.R. Lift is designed for fully independent operation with a simple, repeatable sequence.</p>
       </div>
 
-      <!-- ---- PRIOR ART 3 ---- -->
       <div class="lit-card fade-in">
-        <h4>Existing Product / Patent Name</h4>
-        <p>what it does, why star lift is better and different</p>
+        <h4>Ceiling & Floor Lift Systems</h4>
+        <p>Powered lift systems can assist with transfers but require heavy, permanent installation that is not feasible for most home or care environments. The S.T.A.R. Lift requires no installation — it simply clamps onto any standard wheelchair and is ready to use immediately.</p>
       </div>
-
-      <!-- ---- ADD MORE PRIOR ART HERE if needed ---- -->
 
     </div>
 
@@ -833,16 +825,18 @@
     <h2 class="section-title fade-in">Exploded View</h2>
     <p class="section-subtitle fade-in">Key components of the S.T.A.R. Lift</p>
 
-    <!-- TO DO: write a short intro sentence -->
     <p class="section-text fade-in">
-      blah blah here are key components. Each part is labeled and described blah blah.
+      The exploded view below shows all key components of the S.T.A.R. Lift assembly. The device consists of the scissor lift, linear actuator, leg raising panel, seat panel, back panel, arm supports, clamp brackets, DC motor controls, servo motor, and handheld remote. Each component plays a distinct role in the transfer sequence.
     </p>
 
-    <!-- TO DO: replace with your actual exploded view image filename -->
-    <img class="section-img fade-in" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift Exploded View" />
-
-    <!-- TO DO: add a second exploded view image if you have one -->
-    <!-- <img class="section-img" src="exploded2.jpg" alt="S.T.A.R. Lift Exploded View 2" /> -->
+    <!-- TO DO: upload your exploded view image to GitHub and replace 'exploded.jpg' -->
+    <!-- TO DO: delete the placeholder div and uncomment the img tag below -->
+    <div class="img-placeholder fade-in">
+      ↑ upload your SolidWorks exploded view image and replace this
+      <!-- When ready delete this div and use:
+      <img class="section-img" src="exploded.jpg" alt="S.T.A.R. Lift Exploded View" />
+      -->
+    </div>
 
     <a href="#hero" class="back-btn" style="margin-top:40px; display:inline-block;">Back to Top</a>
   </section>
@@ -852,47 +846,46 @@
   ===================== -->
   <section id="analysis">
     <h2 class="section-title fade-in">Analysis</h2>
-    <p class="section-subtitle fade-in">How FEA shaped our design decisions</p>
+    <p class="section-subtitle fade-in">How our analyses shaped key design decisions</p>
 
-    <!-- TO DO: write a short intro paragraph -->
     <p class="section-text fade-in">
-      INTRO; describe analysis/ why important to the design process.
+      To validate the structural integrity and stability of the S.T.A.R. Lift, our team performed four analyses targeting the most critical design constraints — stability, structural strength, and safe load transfer across each major mechanism.
     </p>
 
-<div class="sim-grid">
+    <div class="sim-grid">
 
-      <!-- ---- CENTER OF MASS ANALYSIS ---- -->
       <div class="sim-card fade-in">
+        <!-- TO DO: add image of COM analysis -->
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 1</p>
         <h4>Center of Mass Analysis</h4>
         <p><strong>Question:</strong> Will the S.T.A.R. Lift remain stable throughout every stage of the transfer, or is there a risk of tipping?</p>
-        <p><strong>Method:</strong> We tracked the system's center of mass in SolidWorks through all four transfer states; initial position, leg panel raised, scissor lift raised, and sliding mechanism fully laterally extended, across a range of user masses up to 118.8 kg.</p>
-        <p><strong>Result:</strong> The device showed no risk of tipping in any direction across all tested configurations. This confirmed our 20 kg design target is safe, and gave us confidence that the device holds up even beyond that.</p>
+        <p><strong>Method:</strong> We tracked the system's center of mass in SolidWorks through all four transfer states — initial position, leg panel raised, scissor lift extended, and fully laterally extended — across a range of user masses up to 118.8 kg.</p>
+        <p><strong>Result:</strong> The device showed no risk of tipping in any direction across all tested configurations. This confirmed our 20 kg design target is safe, and gave us confidence the device holds up even beyond that.</p>
       </div>
 
-      <!-- ---- SCISSOR LIFT ANALYSIS ---- -->
       <div class="sim-card fade-in">
+        <!-- TO DO: add image of scissor lift FEA -->
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 2</p>
         <h4>Scissor Lift Analysis</h4>
-        <p><strong>Question:</strong> Can the scissor lift links handle the forces placed on them during the hardest part of the lift, coming up from a fully collapsed position?</p>
+        <p><strong>Question:</strong> Can the scissor lift links handle the forces placed on them during the hardest part of the lift — coming up from a fully collapsed position?</p>
         <p><strong>Method:</strong> We ran a finite element analysis (FEA) on a single scissor lift link under a conservative axial force of 2,401 N, and verified our results through mesh convergence up to 469,520 elements.</p>
         <p><strong>Result:</strong> The maximum stress was 82.51 MPa with a factor of safety of 3.4, confirming the links are strong enough to handle the worst-case loading scenario.</p>
       </div>
 
-      <!-- ---- SLIDING ANALYSIS ---- -->
       <div class="sim-card fade-in">
+        <!-- TO DO: add image of sliding FEA -->
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 3</p>
         <h4>Sliding Analysis</h4>
         <p><strong>Question:</strong> When the seat is fully extended over the bed, can the sliding panel support the user's weight without excessive bending or deflection?</p>
-        <p><strong>Method:</strong> We performed FEA on the sliding top adaptor while it was fully extended, using a conservative load of 56.1 kg spread across the seat surface. Multiple mesh convergence studies were run to ensure accuracy.</p>
-        <p><strong>Result:</strong> The maximum stress was 7.82 MPa with a factor of safety of 35.3 and a maximum deflection of under 0.1 mm, well within acceptable limits for safe use.</p>
+        <p><strong>Method:</strong> We performed FEA on the sliding top adaptor at its most vulnerable position — fully extended — using a conservative load of 56.1 kg spread across the seat surface. Multiple mesh convergence studies were run to ensure accuracy.</p>
+        <p><strong>Result:</strong> Maximum stress came in at 7.82 MPa with a factor of safety of 35.3 and a maximum deflection of just 0.14 mm, well within acceptable limits for safe use.</p>
       </div>
 
-      <!-- ---- CLAMP ANALYSIS ---- -->
       <div class="sim-card fade-in">
+        <!-- TO DO: add image of clamp FEA -->
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 4</p>
         <h4>Clamp Analysis</h4>
@@ -902,8 +895,6 @@
       </div>
 
     </div>
-      <!-- ---- ADD MORE STUDIES HERE if needed ---- -->
-
 
     <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
   </section>
