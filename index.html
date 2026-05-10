@@ -859,50 +859,49 @@
       INTRO; describe analysis/ why important to the design process.
     </p>
 
-   <div class="sim-grid">
+ <div class="sim-grid">
 
-      <!-- ---- STUDY 1 ---- -->
+      <!-- ---- CENTER OF MASS ANALYSIS ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 1</p>
         <h4>Center of Mass Analysis</h4>
-        <p><strong>Question:</strong> What question investigating?</p>
-        <p><strong>Method:</strong> How perform this study?</p>
-        <p><strong>Result:</strong> finding and design decision it led to</p>
+        <p><strong>Question:</strong> Does the S.T.A.R. Lift remain stable and avoid tipping during all stages of the transfer — initial position, leg panel raised, scissor lift extended, and fully laterally extended?</p>
+        <p><strong>Method:</strong> The center of mass (COM) was tracked in SolidWorks across all four transfer states for four different user masses (20 kg, 30 kg, 69.9 kg, and 118.8 kg), with a confirmed design target of 20 kg. X, Y, and Z coordinates were recorded at each stage.</p>
+        <p><strong>Result:</strong> No side tipping was found across all tested user masses. Forward and backward tipping was also not a concern. The device is designed for a target user weight of 20 kg, though the analysis confirms stability is maintained at higher masses as well.</p>
       </div>
 
-      <!-- ---- STUDY 2 ---- -->
+      <!-- ---- SCISSOR LIFT ANALYSIS ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 2</p>
         <h4>Scissor Lift Analysis</h4>
-        <p><strong>Question:</strong> What question investigating?</p>
-        <p><strong>Method:</strong> How perform this study?</p>
-        <p><strong>Result:</strong> finding and design decision it led to</p>
+        <p><strong>Question:</strong> Can the scissor lift links withstand the axial forces experienced during the worst-case scenario — lifting from a fully collapsed state with maximum payload?</p>
+        <p><strong>Method:</strong> A finite element analysis (FEA) was performed on a single scissor lift link. The total payload was estimated at 721.6 N (conservative). An axial force of 2,401 N was applied to the hole surface of the bottom link. Mesh convergence was performed across 5 mesh densities up to 469,520 elements.</p>
+        <p><strong>Result:</strong> Maximum stress converged to 82.51 MPa with a factor of safety of 3.4, well above the minimum acceptable FOS. This confirmed the scissor lift links are structurally sufficient for the design load.</p>
       </div>
 
-      <!-- ---- STUDY 3 ---- -->
+      <!-- ---- SLIDING ANALYSIS ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 3</p>
         <h4>Sliding Analysis</h4>
-        <p><strong>Question:</strong> What question investigating?</p>
-        <p><strong>Method:</strong> How perform this study?</p>
-        <p><strong>Result:</strong> finding and design decision it led to</p>
+        <p><strong>Question:</strong> Can the sliding top adaptor panel withstand bending stresses when the seat is fully extended (maximum cantilever condition) under the user's weight?</p>
+        <p><strong>Method:</strong> FEA was performed on the sliding top adaptor in SolidWorks. Load was distributed over the entire seat surface. Multiple mesh convergence studies were run with varying fillet configurations. Conservative total mass of 56.1 kg (550.3 N) was used as the worst-case load.</p>
+        <p><strong>Result:</strong> Maximum stress converged to 7.821 MPa with a factor of safety of 35.3 under conservative loading. Maximum displacement was 0.1385 mm — well within acceptable limits. The panel design was confirmed as structurally sound.</p>
       </div>
 
-      <!-- ---- STUDY 4 ---- -->
+      <!-- ---- CLAMP ANALYSIS ---- -->
       <div class="sim-card fade-in">
         <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 4</p>
         <h4>Clamp Analysis</h4>
-        <p><strong>Question:</strong> What question investigating?</p>
-        <p><strong>Method:</strong> How perform this study?</p>
-        <p><strong>Result:</strong> finding and design decision it led to</p>
+        <p><strong>Question:</strong> Can the clamp bracket withstand the load transferred from the scissor lift under maximum payload conditions?</p>
+        <p><strong>Method:</strong> FEA was performed on a single clamp bracket in SolidWorks using Al 6061 (yield strength 276 MPa). Fixed geometry was applied at the mounting hole surfaces. A distributed downward force of 199.09 N was applied to the inner top surface of the U bracket. Mesh convergence was performed up to 68,073 elements.</p>
+        <p><strong>Result:</strong> Maximum stress converged to 8.326 MPa with a factor of safety of 33.1 — far exceeding the minimum requirement. Maximum displacement was only 0.00155 mm, confirming the clamp bracket is significantly over-designed for the applied load.</p>
       </div>
 
     </div>
-
       <!-- ---- ADD MORE STUDIES HERE if needed ---- -->
 
 
