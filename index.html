@@ -218,6 +218,13 @@
       display: block;
     }
 
+    .analysis-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
     #about {
       background: #c8c8f0;
       padding: 100px 40px;
@@ -706,11 +713,15 @@
     <p class="section-text fade-in">
       To validate the structural integrity and stability of the S.T.A.R. Lift, our team performed four analyses targeting the most critical design constraints, including stability, structural strength, and safe load transfer across each major mechanism.
     </p>
+
     <div class="sim-grid">
 
       <div class="sim-card fade-in">
         <p class="sim-label">Analysis 1</p>
         <h4>Center of Mass Analysis</h4>
+        <img class="analysis-img" src="compic.png" alt="COM setup diagram"/>
+        <img class="analysis-img" src="comx.png" alt="COM x vs user mass"/>
+        <img class="analysis-img" src="comy.png" alt="COM y vs user mass"/>
         <p><strong>Question:</strong> Will the S.T.A.R. Lift remain stable throughout every stage of the transfer, or is there a risk of tipping?</p>
         <p><strong>Method:</strong> We tracked the system's center of mass in SolidWorks through all four transfer states, initial position, leg panel raised, scissor lift extended, and fully laterally extended, across a range of user masses up to 118.8 kg.</p>
         <p><strong>Result:</strong> The device showed no risk of tipping in any direction across all tested configurations. This confirmed our 20 kg design target is safe, and gave us confidence the device holds up even beyond that.</p>
@@ -719,6 +730,8 @@
       <div class="sim-card fade-in">
         <p class="sim-label">Analysis 2</p>
         <h4>Scissor Lift Analysis</h4>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.49.54%20PM.png" alt="Scissor lift FEA"/>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.49.27%20PM.png" alt="Scissor lift mesh convergence"/>
         <p><strong>Question:</strong> Can the scissor lift links handle the forces placed on them during the hardest part of the lift, coming up from a fully collapsed position?</p>
         <p><strong>Method:</strong> We ran a finite element analysis (FEA) on a single scissor lift link under a conservative axial force of 2,401 N, and verified our results through mesh convergence up to 469,520 elements.</p>
         <p><strong>Result:</strong> The maximum stress was 82.51 MPa with a factor of safety of 3.4, confirming the links are strong enough to handle the worst-case loading scenario.</p>
@@ -727,6 +740,9 @@
       <div class="sim-card fade-in">
         <p class="sim-label">Analysis 3</p>
         <h4>Sliding Analysis</h4>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.54.07%20PM.png" alt="Sliding von Mises stress"/>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.54.23%20PM.png" alt="Sliding displacement"/>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.54.43%20PM.png" alt="Sliding mesh convergence"/>
         <p><strong>Question:</strong> When the seat is fully extended over the bed, can the sliding panel support the user's weight without excessive bending or deflection?</p>
         <p><strong>Method:</strong> We performed FEA on the sliding top adaptor at its most vulnerable position, fully extended, using a conservative load of 56.1 kg spread across the seat surface. Multiple mesh convergence studies were run to ensure accuracy.</p>
         <p><strong>Result:</strong> Maximum stress came in at 7.82 MPa with a factor of safety of 35.3 and a maximum deflection of just 0.14 mm, well within acceptable limits for safe use.</p>
@@ -735,6 +751,7 @@
       <div class="sim-card fade-in">
         <p class="sim-label">Analysis 4</p>
         <h4>Clamp Analysis</h4>
+        <img class="analysis-img" src="Screen%20Shot%202026-05-10%20at%209.55.41%20PM.png" alt="Clamp mesh convergence"/>
         <p><strong>Question:</strong> Are the clamp brackets that connect the scissor lift to the wheelchair strong enough to handle the full load of the device and user?</p>
         <p><strong>Method:</strong> We ran FEA on a single aluminum (Al 6061) clamp bracket, applying a downward force of 199.09 N at the mounting surface and performing mesh convergence up to 68,073 elements.</p>
         <p><strong>Result:</strong> The bracket showed a maximum stress of 8.33 MPa and a factor of safety of 33.1, with virtually no displacement. The clamps are more than capable of handling the required loads.</p>
