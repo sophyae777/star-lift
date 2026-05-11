@@ -19,9 +19,6 @@
       cursor: crosshair;
     }
 
-    /* =====================
-       NAV
-    ===================== */
     nav {
       position: fixed;
       top: 0;
@@ -65,9 +62,6 @@
 
     nav ul li a:hover { color: #b8b8ff; }
 
-    /* =====================
-       HERO
-    ===================== */
     #hero {
       min-height: 100vh;
       background: radial-gradient(ellipse at top, #1a1a4e 0%, #0a0a2e 60%);
@@ -147,9 +141,6 @@
       opacity: 0.7;
     }
 
-    /* =====================
-       SHARED SECTION STYLES
-    ===================== */
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 52px;
@@ -202,23 +193,6 @@
 
     .back-btn:hover { background: #b8b8ff; color: #0a0a2e; }
 
-    .img-placeholder {
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      background: #2a2a8e;
-      border: 2px dashed #b8b8ff;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 24px auto;
-      color: #b8b8ff;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
     .video-placeholder {
       width: 100%;
       max-width: 700px;
@@ -244,9 +218,6 @@
       display: block;
     }
 
-    /* =====================
-       ABOUT - light lavender
-    ===================== */
     #about {
       background: #c8c8f0;
       padding: 100px 40px;
@@ -313,7 +284,7 @@
 
     .member-name {
       font-family: 'Playfair Display', serif;
-      font-size: 16px;
+      font-size: 15px;
       color: white;
       margin-top: 16px;
       text-align: center;
@@ -321,7 +292,7 @@
     }
 
     .member-role {
-      font-size: 12px;
+      font-size: 11px;
       color: #b8b8ff;
       text-align: center;
       margin-top: 4px;
@@ -400,18 +371,12 @@
 
     .bio-star-frame img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* =====================
-       PROJECT OVERVIEW - dark navy
-    ===================== */
     #overview {
       background: #0a0a2e;
       padding: 100px 40px;
       text-align: center;
     }
 
-    /* =====================
-       PROTOTYPE - light periwinkle
-    ===================== */
     #prototype {
       background: #b8c8f0;
       padding: 100px 40px;
@@ -452,25 +417,6 @@
       line-height: 1.7;
     }
 
-    .prototype-media {
-      width: 100%;
-      height: 200px;
-      background: #0a0a2e;
-      border: 2px dashed #b8b8ff;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #b8b8ff;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    /* =====================
-       LITERATURE - dark navy
-    ===================== */
     #literature {
       background: #0d0d3e;
       padding: 100px 40px;
@@ -506,9 +452,6 @@
       line-height: 1.7;
     }
 
-    /* =====================
-       EXPLODED VIEW - light lavender
-    ===================== */
     #exploded {
       background: #c8c8f0;
       padding: 100px 40px;
@@ -521,9 +464,6 @@
     #exploded .back-btn { border-color: #1a1a6e; color: #1a1a6e; }
     #exploded .back-btn:hover { background: #1a1a6e; color: white; }
 
-    /* =====================
-       ANALYSIS - dark navy
-    ===================== */
     #analysis {
       background: #0a0a2e;
       padding: 100px 40px;
@@ -567,25 +507,6 @@
       margin-bottom: 6px;
     }
 
-    .sim-media {
-      width: 100%;
-      height: 180px;
-      background: #0a0a2e;
-      border: 2px dashed #b8b8ff;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #b8b8ff;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    /* =====================
-       SCROLL FADE IN
-    ===================== */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -602,7 +523,6 @@
 
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#hero" class="logo">S.T.A.R. <span>lift</span></a>
     <ul>
@@ -615,37 +535,25 @@
     </ul>
   </nav>
 
-  <!-- =====================
-       HERO
-  ===================== -->
   <section id="hero">
     <div class="star-field" id="starField"></div>
-
     <svg class="deco-star" style="top:15%; left:8%; width:80px;" viewBox="0 0 100 100">
-      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
-               fill="none" stroke="#b8b8ff" stroke-width="3"/>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="none" stroke="#b8b8ff" stroke-width="3"/>
     </svg>
     <svg class="deco-star" style="top:20%; right:10%; width:50px;" viewBox="0 0 100 100">
-      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
-               fill="#b8b8ff" opacity="0.5"/>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#b8b8ff" opacity="0.5"/>
     </svg>
     <svg class="deco-star" style="bottom:20%; left:15%; width:40px;" viewBox="0 0 100 100">
-      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
-               fill="#ffffff" opacity="0.3"/>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#ffffff" opacity="0.3"/>
     </svg>
-
     <h1 class="hero-title">S.T.A.R. <span>lift</span></h1>
     <p class="hero-subtitle">Self Transfer Automated Raising Lift</p>
     <a href="#about" class="hero-btn">Learn More</a>
   </section>
 
-<!-- =====================
-       ABOUT US
-  ===================== -->
   <section id="about">
     <h2 class="section-title fade-in">About Us</h2>
-    <p class="section-subtitle fade-in">Meet the team behind S.T.A.R. Lift (Click each name to learn more!)</p>
-
+    <p class="section-subtitle fade-in">Meet the team behind S.T.A.R. Lift (click each name to learn more!)</p>
     <div class="team-grid">
 
       <div class="team-card fade-in" onclick="openBio('alexa')">
@@ -653,7 +561,7 @@
           <img src="Alexa_Headshot.png" alt="Alexa Dumitriu" onerror="this.style.display='none'"/>
         </div>
         <h3 class="member-name">Alexa Dumitriu</h3>
-        <p class="member-role">Mechanical & Electrical Engineering</p>
+        <p class="member-role">Mechanical Engineering</p>
       </div>
 
       <div class="team-card fade-in" onclick="openBio('kelsey')">
@@ -690,7 +598,6 @@
 
     </div>
 
-    <!-- Bio popup -->
     <div class="bio-overlay" id="bioOverlay" onclick="closeBio()">
       <div class="bio-popup" onclick="event.stopPropagation()">
         <button class="bio-close" onclick="closeBio()">✕</button>
@@ -704,73 +611,53 @@
     </div>
   </section>
 
-  <!-- =====================
-       PROJECT OVERVIEW
-  ===================== -->
   <section id="overview">
     <h2 class="section-title fade-in">Project Overview</h2>
     <p class="section-subtitle fade-in">What it is, why we built it, and how it works</p>
-
     <p class="section-text fade-in">
       The S.T.A.R. Lift (Self Transfer Automated Raising Lift) is a retrofit attachment for standard wheelchairs that enables users to independently transfer themselves from their wheelchair to a bed, and back again, without the assistance of a caregiver. By simply clamping onto an existing wheelchair, the device restores a fundamental sense of independence to users who would otherwise rely entirely on another person for one of the most routine parts of their day.
     </p>
-
     <p class="section-text fade-in">
       Living in New York City, our team constantly noticed the gap between the city's promises of accessibility and the reality on the ground, from inaccessible subway stations to spaces that simply were not designed with wheelchair users in mind. When we dove deeper into the research, we found that bed-to-chair transfers were one of the most overlooked problems in this space. They happen multiple times a day, every day, and they take a serious toll on both caregivers, who suffer high rates of musculoskeletal injuries from repeated manual lifting, and users, whose independence and dignity are affected every time they need to ask for help. We built the S.T.A.R. Lift to change that.
     </p>
-
     <p class="section-text fade-in">
       Using the S.T.A.R. Lift is straightforward. The device clamps directly onto the user's wheelchair with no heavy installation required. Once positioned next to the bed, the user raises their legs to a horizontal position using the leg raising panel, controlled by a handheld remote. Next, they press a button to activate the scissor lift, which raises them to the height of the bed. The linear actuator then slides them laterally over the bed surface. Throughout the entire process, fully adjustable arm supports provide stability and upper body support, allowing the user to shift themselves safely onto the bed. Every step is designed to be repeatable, predictable, and entirely in the user's control.
     </p>
-
-    <!-- TO DO: replace with your actual SolidWorks Visualize render filename -->
     <img class="section-img fade-in" src="slidingPanels-photo3.PNG" alt="S.T.A.R. Lift SolidWorks Render" />
-
     <a href="#hero" class="back-btn fade-in">Back to Top</a>
   </section>
 
-  <!-- =====================
-       PROTOTYPE
-  ===================== -->
   <section id="prototype">
     <h2 class="section-title fade-in">Prototype</h2>
     <p class="section-subtitle fade-in">See the S.T.A.R. Lift in action</p>
-
     <p class="section-text fade-in">
       Our prototype demonstrates the full transfer sequence from wheelchair to bed. Starting from a seated position, the user activates each mechanism in sequence, leg raise, lift, and slide, arriving safely over the bed surface with arm support throughout. The video below shows the complete functionality of the prototype end to end.
     </p>
 
-    <!-- TO DO: replace VIDEO_ID with your actual YouTube video ID -->
-    <!-- <iframe width="700" height="400" style="border-radius:16px; display:block; margin:0 auto 40px;"
-      src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-    <div class="video-placeholder fade-in">↑ paste your YouTube video ID here when ready</div>
+    <div class="video-placeholder fade-in">Main demo video coming soon</div>
 
     <div class="prototype-grid">
 
       <div class="prototype-card fade-in">
-        <!-- TO DO: add image or video of scissor lift -->
-        <div class="prototype-media">Image / Video Here</div>
+        <img src="liftgif.gif" alt="Scissor lift in action" style="width:100%; border-radius:12px; margin-bottom:16px;"/>
         <h4>Scissor Lift</h4>
         <p>The scissor lift raises the user from wheelchair height to bed height at the press of a button. It is electrically actuated using a DC motor, making the lift smooth and effortless for the user.</p>
       </div>
 
       <div class="prototype-card fade-in">
-        <!-- TO DO: add image or video of leg panel -->
-        <div class="prototype-media">Image / Video Here</div>
+        <img src="legraisegif.gif" alt="Leg raising panel in action" style="width:100%; border-radius:12px; margin-bottom:16px;"/>
         <h4>Leg Raising Panel</h4>
         <p>The leg raising panel rotates the user's legs up 180 degrees to a position parallel with the bed surface. It is electrically actuated using a servo motor and controlled via handheld remote.</p>
       </div>
 
       <div class="prototype-card fade-in">
-        <!-- TO DO: add image or video of sliding mechanism -->
-        <div class="prototype-media">Image / Video Here</div>
+        <img src="slidegif.gif" alt="Sliding mechanism in action" style="width:100%; border-radius:12px; margin-bottom:16px;"/>
         <h4>Sliding Mechanism</h4>
         <p>The linear actuator slides the user laterally from the wheelchair over to the bed surface. Controlled via remote, this mechanism handles the full lateral transfer smoothly and safely.</p>
       </div>
 
       <div class="prototype-card fade-in">
-        <!-- TO DO: add image or video of arm support -->
-        <div class="prototype-media">Image / Video Here</div>
+        <img src="armraisegif.gif" alt="Arm support in action" style="width:100%; border-radius:12px; margin-bottom:16px;"/>
         <h4>Arm Support</h4>
         <p>The arm supports are the only mechanically actuated component of the device. Fully adjustable in height, length, and position, one side swings out to assist the user in shifting onto the bed. They lock securely in any position and provide stability throughout the entire transfer.</p>
       </div>
@@ -780,78 +667,48 @@
     <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
   </section>
 
-  <!-- =====================
-       LITERATURE & PRIOR ART
-  ===================== -->
   <section id="literature">
     <h2 class="section-title fade-in">Literature & Prior Art</h2>
     <p class="section-subtitle fade-in">Research, motivation, and what makes us different</p>
-
-<p class="section-text fade-in">
+    <p class="section-text fade-in">
       In the U.S., about 5.5 million people rely on a wheelchair for mobility, and a significant portion require assisted transfers multiple times a day. According to the Bureau of Labor Statistics, nearly 80% of all injuries to professional caregivers result from lifting, pulling, pushing, and carrying, activities that are central to bed-to-chair transfers. Beyond caregiver injuries, the lack of independence experienced by users during transfers affects their dignity and quality of life daily. Living in New York City, our team saw this gap firsthand and set out to design a solution that puts control back in the hands of the user.
     </p>
-
     <div class="lit-grid">
-
       <div class="lit-card fade-in">
         <h4>Transfer Boards</h4>
         <p>Transfer boards allow users to slide between surfaces, but they require significant trunk control, balance, and upper body strength. This limits their accessibility and makes them unreliable for users with more severe mobility impairments. The S.T.A.R. Lift requires none of these, as the mechanisms do the work.</p>
       </div>
-
       <div class="lit-card fade-in">
         <h4>Hoists & Slings</h4>
         <p>Hoists lift users via a sling system but require a caregiver to operate them at all times, doing nothing to restore user independence. They are also slow, cumbersome, and can feel undignified for users. The S.T.A.R. Lift is designed for fully independent operation with a simple, repeatable sequence.</p>
       </div>
-
       <div class="lit-card fade-in">
         <h4>Ceiling & Floor Lift Systems</h4>
         <p>Powered lift systems can assist with transfers but require heavy, permanent installation that is not feasible for most home or care environments. The S.T.A.R. Lift requires no installation, as it simply clamps onto any standard wheelchair and is ready to use immediately.</p>
       </div>
-
     </div>
-
     <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
   </section>
 
-  <!-- =====================
-       EXPLODED VIEW
-  ===================== -->
   <section id="exploded">
     <h2 class="section-title fade-in">Exploded View</h2>
     <p class="section-subtitle fade-in">Key components of the S.T.A.R. Lift</p>
-
     <p class="section-text fade-in">
       The exploded view below shows all key components of the S.T.A.R. Lift assembly. The device consists of the scissor lift, linear actuator, leg raising panel, seat panel, back panel, arm supports, clamp brackets, DC motor controls, servo motor, and handheld remote. Each component plays a distinct role in the transfer sequence.
     </p>
-
-    <!-- TO DO: upload your exploded view image to GitHub and replace 'exploded.jpg' -->
-    <!-- TO DO: delete the placeholder div and uncomment the img tag below -->
-    <div class="img-placeholder fade-in">
-      ↑ upload your SolidWorks exploded view image and replace this
-      <!-- When ready delete this div and use:
-      <img class="section-img" src="exploded.jpg" alt="S.T.A.R. Lift Exploded View" />
-      -->
-    </div>
-
+    <img class="section-img fade-in" src="exploded.jpg" alt="S.T.A.R. Lift Exploded View" />
     <a href="#hero" class="back-btn" style="margin-top:40px; display:inline-block;">Back to Top</a>
   </section>
 
-  <!-- =====================
-       ANALYSIS
-  ===================== -->
   <section id="analysis">
     <h2 class="section-title fade-in">Analysis</h2>
     <p class="section-subtitle fade-in">How our analyses shaped key design decisions</p>
-
     <p class="section-text fade-in">
       To validate the structural integrity and stability of the S.T.A.R. Lift, our team performed four analyses targeting the most critical design constraints, including stability, structural strength, and safe load transfer across each major mechanism.
     </p>
-
     <div class="sim-grid">
 
       <div class="sim-card fade-in">
-        <!-- TO DO: add image of COM analysis -->
-        <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 1</p>
         <h4>Center of Mass Analysis</h4>
         <p><strong>Question:</strong> Will the S.T.A.R. Lift remain stable throughout every stage of the transfer, or is there a risk of tipping?</p>
@@ -860,8 +717,6 @@
       </div>
 
       <div class="sim-card fade-in">
-        <!-- TO DO: add image of scissor lift FEA -->
-        <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 2</p>
         <h4>Scissor Lift Analysis</h4>
         <p><strong>Question:</strong> Can the scissor lift links handle the forces placed on them during the hardest part of the lift, coming up from a fully collapsed position?</p>
@@ -870,8 +725,6 @@
       </div>
 
       <div class="sim-card fade-in">
-        <!-- TO DO: add image of sliding FEA -->
-        <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 3</p>
         <h4>Sliding Analysis</h4>
         <p><strong>Question:</strong> When the seat is fully extended over the bed, can the sliding panel support the user's weight without excessive bending or deflection?</p>
@@ -880,8 +733,6 @@
       </div>
 
       <div class="sim-card fade-in">
-        <!-- TO DO: add image of clamp FEA -->
-        <div class="sim-media">Image / Video of Study Here</div>
         <p class="sim-label">Analysis 4</p>
         <h4>Clamp Analysis</h4>
         <p><strong>Question:</strong> Are the clamp brackets that connect the scissor lift to the wheelchair strong enough to handle the full load of the device and user?</p>
@@ -890,16 +741,11 @@
       </div>
 
     </div>
-
     <a href="#hero" class="back-btn" style="margin-top:60px; display:inline-block;">Back to Top</a>
   </section>
 
-  <!-- =====================
-       JAVASCRIPT
-  ===================== -->
   <script>
 
-    // --- Twinkling star background ---
     const starField = document.getElementById('starField');
     for (let i = 0; i < 120; i++) {
       const star = document.createElement('div');
@@ -914,7 +760,6 @@
       starField.appendChild(star);
     }
 
-    // --- Scroll fade-in animation ---
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -925,9 +770,7 @@
     }, { threshold: 0.1 });
     faders.forEach(el => observer.observe(el));
 
-    // --- Team bio data ---
-    // TO DO: fill in role and bio for each team member
-  const bioData = {
+    const bioData = {
       alexa: {
         name: 'Alexa Dumitriu',
         role: 'Mechanical Engineering',
@@ -960,7 +803,6 @@
       }
     };
 
-    // --- Open bio popup ---
     function openBio(name) {
       const person = bioData[name];
       document.getElementById('bioName').textContent = person.name;
@@ -970,12 +812,10 @@
       document.getElementById('bioOverlay').classList.add('active');
     }
 
-    // --- Close bio popup ---
     function closeBio() {
       document.getElementById('bioOverlay').classList.remove('active');
     }
 
-    // --- Click star burst animation ---
     document.addEventListener('click', function(e) {
       const star = document.createElement('div');
       star.innerHTML = `
